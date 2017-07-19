@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<BlackList>
+  <Version>006A</Version>
+  <FechaDeActivacion>06/09/2016</FechaDeActivacion>
+  <EstatusListaNegra />
+  <CantidadDeTarjetas>2</CantidadDeTarjetas>
+  <Tarjetas>
+    <IdLogico>11E1A302</IdLogico>
+    <IdLogico>11E1A301</IdLogico>
+  </Tarjetas>
+</BlackList>

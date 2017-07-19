@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Product_Table>
+  <Version>00DC</Version>
+  <Product>
+    <CodProducto>2</CodProducto>
+    <Descripcion>10 Rides Child</Descripcion>
+    <TipoProducto>1</TipoProducto>
+    <CodClase>2</CodClase>
+    <Precio>15.00</Precio>
+    <Monto>0.00</Monto>
+    <Boletos>10</Boletos>
+    <FechaInicio>01/01/2000</FechaInicio>
+    <FechaFin>01/01/2000</FechaFin>
+    <NumeroDias>0</NumeroDias>
+  </Product>
+  <Product>
+    <CodProducto>3</CodProducto>
+    <Descripcion>10 Rides Senior</Descripcion>
+    <TipoProducto>1</TipoProducto>
+    <CodClase>3</CodClase>
+    <Precio>15.00</Precio>
+    <Monto>0.00</Monto>
+    <Boletos>10</Boletos>
+    <FechaInicio>01/01/2000</FechaInicio>
+    <FechaFin>01/01/2000</FechaFin>
+    <NumeroDias>0</NumeroDias>
+  </Product>
+  <Product>
+    <CodProducto>1</CodProducto>
+    <Descripcion>10 Rides Adult</Descripcion>
+    <TipoProducto>1</TipoProducto>
+    <CodClase>1</CodClase>
+    <Precio>20.00</Precio>
+    <Monto>0.00</Monto>
+    <Boletos>10</Boletos>
+    <FechaInicio>01/01/2000</FechaInicio>
+    <FechaFin>01/01/2000</FechaFin>
+    <NumeroDias>0</NumeroDias>
+  </Product>
+  <Product>
+    <CodProducto>5</CodProducto>
+    <Descripcion>August 2016 (C)</Descripcion>
+    <TipoProducto>3</TipoProducto>
+    <CodClase>2</CodClase>
+    <Precio>56.00</Precio>
+    <Monto>0.00</Monto>
+    <Boletos>0</Boletos>
+    <FechaInicio>01/08/2016</FechaInicio>
+    <FechaFin>31/08/2016</FechaFin>
+    <NumeroDias>30</NumeroDias>
+  </Product>
+  <Product>
+    <CodProducto>6</CodProducto>
+    <Descripcion>August 2016 (S)</Descripcion>
+    <TipoProducto>3</TipoProducto>
+    <CodClase>3</CodClase>
+    <Precio>56.00</Precio>
+    <Monto>0.00</Monto>
+    <Boletos>0</Boletos>
+    <FechaInicio>01/08/2016</FechaInicio>
+    <FechaFin>31/08/2016</FechaFin>
+    <NumeroDias>30</NumeroDias>
+  </Product>
+  <Product>
+    <CodProducto>4</CodProducto>
+    <Descripcion>August 2016 (A)</Descripcion>
+    <TipoProducto>3</TipoProducto>
+    <CodClase>1</CodClase>
+    <Precio>70.00</Precio>
+    <Monto>0.00</Monto>
+    <Boletos>0</Boletos>
+    <FechaInicio>01/08/2016</FechaInicio>
+    <FechaFin>31/08/2016</FechaFin>
+    <NumeroDias>30</NumeroDias>
+  </Product>
+</Product_Table>

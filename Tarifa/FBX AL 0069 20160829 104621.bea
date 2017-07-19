@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ActionList>
+  <Version>00D1</Version>
+  <FechaDeActivacion>29/08/2016</FechaDeActivacion>
+  <CantidadDeTarjetas>2</CantidadDeTarjetas>
+  <Tarjeta>
+    <IdLogico>300000004</IdLogico>
+    <FolioAccion>1</FolioAccion>
+    <TipoDeAccion>2</TipoDeAccion>
+    <MontoAccion1>10</MontoAccion1>
+    <MontoAccion2>0</MontoAccion2>
+    <MontoAccion3>0</MontoAccion3>
+    <MontoAccion4>0</MontoAccion4>
+    <MontoAccion5>0</MontoAccion5>
+    <MontoAccion6>0</MontoAccion6>
+  </Tarjeta>
+  <Tarjeta>
+    <IdLogico>300000003</IdLogico>
+    <FolioAccion>1</FolioAccion>
+    <TipoDeAccion>2</TipoDeAccion>
+    <MontoAccion1>10</MontoAccion1>
+    <MontoAccion2>0</MontoAccion2>
+    <MontoAccion3>0</MontoAccion3>
+    <MontoAccion4>0</MontoAccion4>
+    <MontoAccion5>0</MontoAccion5>
+    <MontoAccion6>0</MontoAccion6>
+  </Tarjeta>
+</ActionList>

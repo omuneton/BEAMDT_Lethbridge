@@ -1,0 +1,524 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{06C607B3-CB15-419E-BD5C-C07E55BCCD33}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BEAMDT</RootNamespace>
+    <AssemblyName>BEAMDT</AssemblyName>
+    <ProjectTypeGuids>{4D628B5B-2FBC-4AA6-8C16-197242AEB884};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PlatformFamilyName>WindowsCE</PlatformFamilyName>
+    <PlatformID>E2BECB1F-8C8C-41ba-B736-9BE7D946A398</PlatformID>
+    <OSVersion>5.0</OSVersion>
+    <DeployDirSuffix>BEAMDT</DeployDirSuffix>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <NativePlatformName>Windows CE</NativePlatformName>
+    <FormFactorID>
+    </FormFactorID>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;$(PlatformFamilyName)</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;$(PlatformFamilyName)</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Micronet.Ce500.DotNetApi, Version=1.0.0.24, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Assemblies\Micronet.Ce500.DotNetApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Micronet.CE500.Sdk, Version=1.0.0.22, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Assemblies\Micronet.CE500.Sdk.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsCE.Forms, Version=3.5.0.0, Culture=neutral, PublicKeyToken=969db8053d3322ac, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\32feet.NET\NETCF\Microsoft.WindowsCE.Forms.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="mscorlib" />
+    <Reference Include="OpenNETCF, Version=2.3.12317.0, Culture=neutral, PublicKeyToken=e60dbea84bb431b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\NetCF\OpenNETCF.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenNETCF.Net, Version=2.3.12317.0, Culture=neutral, PublicKeyToken=e60dbea84bb431b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\NetCF\OpenNETCF.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bluetooth\BluetoothCliente.cs" />
+    <Compile Include="Bluetooth\DeviceDiscovery.cs" />
+    <Compile Include="Classes\clsAppUDPComm.cs" />
+    <Compile Include="Classes\clsBrightness.cs" />
+    <Compile Include="Classes\clsConfig.cs" />
+    <Compile Include="Classes\clsConfigInterfaz.cs" />
+    <Compile Include="Classes\clsCrypto.cs" />
+    <Compile Include="Classes\clsMemoryStatus.cs" />
+    <Compile Include="Classes\clsNetworkStatus.cs" />
+    <Compile Include="Classes\clsPrinter.cs" />
+    <Compile Include="Classes\clsProductos.cs" />
+    <Compile Include="Classes\clsRDR.cs" />
+    <Compile Include="Classes\clsReboot.cs" />
+    <Compile Include="Classes\clsSpecialLogs.cs" />
+    <Compile Include="Classes\clsStatus.cs" />
+    <Compile Include="Classes\clsTarifas.cs" />
+    <Compile Include="Classes\clsUtils.cs" />
+    <Compile Include="Classes\clsVoice.cs" />
+    <Compile Include="Classes\clsVolumen.cs" />
+    <Compile Include="Classes\ProcessCE.cs" />
+    <Compile Include="Classes\SonidoFarebox.cs" />
+    <Compile Include="frmPrincipalAlt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipalAlt.Designer.cs">
+      <DependentUpon>frmPrincipalAlt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GPS\clsGPS.cs" />
+    <Compile Include="Screens\Bluetooth1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\Bluetooth1.Designer.cs">
+      <DependentUpon>Bluetooth1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Bluetooth2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\Bluetooth2.Designer.cs">
+      <DependentUpon>Bluetooth2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\ConsoleBrightness.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\ConsoleBrightness.Designer.cs">
+      <DependentUpon>ConsoleBrightness.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\ConsoleVolume.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\ConsoleVolume.Designer.cs">
+      <DependentUpon>ConsoleVolume.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\ctrEstatusDown.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\ctrEstatusDown.Designer.cs">
+      <DependentUpon>ctrEstatusDown.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\ctrEstatusUp.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\ctrEstatusUp.Designer.cs">
+      <DependentUpon>ctrEstatusUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\FareboxBrightness.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\FareboxBrightness.Designer.cs">
+      <DependentUpon>FareboxBrightness.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\FareboxVolume.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\FareboxVolume.Designer.cs">
+      <DependentUpon>FareboxVolume.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\ProgramBusData.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\ProgramBusData.Designer.cs">
+      <DependentUpon>ProgramBusData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\ctrIzquierdo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\ctrIzquierdo.Designer.cs">
+      <DependentUpon>ctrIzquierdo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmPrincipalAlt.resx">
+      <DependentUpon>frmPrincipalAlt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Bluetooth1.resx">
+      <DependentUpon>Bluetooth1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Bluetooth2.resx">
+      <DependentUpon>Bluetooth2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\ConsoleBrightness.resx">
+      <DependentUpon>ConsoleBrightness.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\ConsoleVolume.resx">
+      <DependentUpon>ConsoleVolume.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\ctrDerecho.resx">
+      <DependentUpon>ctrDerecho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\ctrEstatusDown.resx">
+      <DependentUpon>ctrEstatusDown.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\ctrEstatusUp.resx">
+      <DependentUpon>ctrEstatusUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\FareboxBrightness.resx">
+      <DependentUpon>FareboxBrightness.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\FareboxVolume.resx">
+      <DependentUpon>FareboxVolume.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\ProgramBusData.resx">
+      <DependentUpon>ProgramBusData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\ctrIzquierdo.resx">
+      <DependentUpon>ctrIzquierdo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Close.resx">
+      <DependentUpon>Close.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\FTP1.resx">
+      <DependentUpon>FTP1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\FTP2.resx">
+      <DependentUpon>FTP2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\FTP3.resx">
+      <DependentUpon>FTP3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Password.resx">
+      <DependentUpon>Password.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Principal.resx">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\ProgramBusDate.resx">
+      <DependentUpon>ProgramBusDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\ProgramBusNumber.resx">
+      <DependentUpon>ProgramBusNumber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\ProgramConsole.resx">
+      <DependentUpon>ProgramConsole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\QuestionEnaDis.resx">
+      <DependentUpon>QuestionEnaDis.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Resultados\ctrResultadoAdjust.resx">
+      <DependentUpon>ctrResultadoAdjust.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Resultados\ctrResultadoMensaje.resx">
+      <DependentUpon>ctrResultadoMensaje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Resultados\ctrResultadoMoneda.resx">
+      <DependentUpon>ctrResultadoMoneda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Resultados\ctrResultadoOpen.resx">
+      <DependentUpon>ctrResultadoOpen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Resultados\ctrResultadoTrans.resx">
+      <DependentUpon>ctrResultadoTrans.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Resultados\ctrResultadoTransNeg.resx">
+      <DependentUpon>ctrResultadoTransNeg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Resultados\ctrResultadoClosed.resx">
+      <DependentUpon>ctrResultadoClosed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Resultados\ctrResultadoVenta.resx">
+      <DependentUpon>ctrResultadoVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\SetAutoClose.resx">
+      <DependentUpon>SetAutoClose.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\SetDirection.resx">
+      <DependentUpon>SetDirection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\SetTimeFormat.resx">
+      <DependentUpon>SetTimeFormat.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Settings1.resx">
+      <DependentUpon>Settings1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Settings2.resx">
+      <DependentUpon>Settings2.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Settings3.resx">
+      <DependentUpon>Settings3.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\SetValue.resx">
+      <DependentUpon>SetValue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\SplashScreen.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\SystemInfo.resx">
+      <DependentUpon>SystemInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Teclados\ctrTecladoClases.resx">
+      <DependentUpon>ctrTecladoClases.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Teclados\ctrTecladoNumerico.resx">
+      <DependentUpon>ctrTecladoNumerico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\TestScreen.resx">
+      <DependentUpon>TestScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Close.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\Close.Designer.cs">
+      <DependentUpon>Close.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\ctrDerecho.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\ctrDerecho.Designer.cs">
+      <DependentUpon>ctrDerecho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\FTP1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\FTP1.Designer.cs">
+      <DependentUpon>FTP1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\FTP2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\FTP2.Designer.cs">
+      <DependentUpon>FTP2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\FTP3.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\FTP3.Designer.cs">
+      <DependentUpon>FTP3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Password.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\Password.Designer.cs">
+      <DependentUpon>Password.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Principal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\Principal.Designer.cs">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\ProgramBusDate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\ProgramBusDate.Designer.cs">
+      <DependentUpon>ProgramBusDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\ProgramBusNumber.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\ProgramBusNumber.Designer.cs">
+      <DependentUpon>ProgramBusNumber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\ProgramConsole.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\ProgramConsole.Designer.cs">
+      <DependentUpon>ProgramConsole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\QuestionEnaDis.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\QuestionEnaDis.Designer.cs">
+      <DependentUpon>QuestionEnaDis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Resultados\ctrResultadoAdjust.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\Resultados\ctrResultadoAdjust.Designer.cs">
+      <DependentUpon>ctrResultadoAdjust.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Resultados\ctrResultadoOpen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\Resultados\ctrResultadoOpen.Designer.cs">
+      <DependentUpon>ctrResultadoOpen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Resultados\ctrResultadoMensaje.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\Resultados\ctrResultadoMensaje.Designer.cs">
+      <DependentUpon>ctrResultadoMensaje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Resultados\ctrResultadoTrans.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\Resultados\ctrResultadoTrans.Designer.cs">
+      <DependentUpon>ctrResultadoTrans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Resultados\ctrResultadoTransNeg.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\Resultados\ctrResultadoTransNeg.Designer.cs">
+      <DependentUpon>ctrResultadoTransNeg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Resultados\ctrResultadoMoneda.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\Resultados\ctrResultadoMoneda.Designer.cs">
+      <DependentUpon>ctrResultadoMoneda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Resultados\ctrResultadoClosed.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\Resultados\ctrResultadoClosed.Designer.cs">
+      <DependentUpon>ctrResultadoClosed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Resultados\ctrResultadoVenta.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\Resultados\ctrResultadoVenta.Designer.cs">
+      <DependentUpon>ctrResultadoVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\SetAutoClose.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\SetAutoClose.Designer.cs">
+      <DependentUpon>SetAutoClose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\SetDirection.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\SetDirection.Designer.cs">
+      <DependentUpon>SetDirection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\SetTimeFormat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\SetTimeFormat.Designer.cs">
+      <DependentUpon>SetTimeFormat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Settings1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\Settings1.Designer.cs">
+      <DependentUpon>Settings1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Settings2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\Settings2.Designer.cs">
+      <DependentUpon>Settings2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Settings3.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\Settings3.Designer.cs">
+      <DependentUpon>Settings3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\SetValue.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\SetValue.Designer.cs">
+      <DependentUpon>SetValue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\SplashScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\SplashScreen.Designer.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\SystemInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\SystemInfo.Designer.cs">
+      <DependentUpon>SystemInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Teclados\ctrTecladoClases.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\Teclados\ctrTecladoClases.Designer.cs">
+      <DependentUpon>ctrTecladoClases.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Teclados\ctrTecladoNumerico.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\Teclados\ctrTecladoNumerico.Designer.cs">
+      <DependentUpon>ctrTecladoNumerico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\TestScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\TestScreen.Designer.cs">
+      <DependentUpon>TestScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Xmodem\ArchivoEsc.cs" />
+    <Compile Include="Xmodem\ArchivoLec.cs" />
+    <Compile Include="Xmodem\Crc.cs" />
+    <Compile Include="Xmodem\DatagramaXModem1K.cs" />
+    <Compile Include="Xmodem\Paquetes.cs" />
+    <Compile Include="Xmodem\TimerPausa.cs" />
+    <Compile Include="Xmodem\Xmodem.cs" />
+    <Compile Include="Xmodem\XmodemR.cs" />
+    <Compile Include="Xmodem\XmodemT.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}">
+        <HostingProcess disable="1" />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
